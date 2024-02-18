@@ -5,21 +5,21 @@
 class Loadbot < Formula
   desc "Workload database driver"
   homepage "https://github.com/kuzxnia/loadbot"
-  version "1.0.1"
+  version "1.0.2"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kuzxnia/loadbot/releases/download/1.0.1/loadbot_1.0.1_darwin_arm64.tar.gz"
-      sha256 "a8613f088cae4a6674c3d8243ccd8294fd2ce5f3ef59d88e485da5bc16895d1a"
+    if Hardware::CPU.intel?
+      url "https://github.com/kuzxnia/loadbot/releases/download/1.0.2/loadbot_1.0.2_darwin_x86_64.tar.gz"
+      sha256 "b6223918831a27f142ff7352c04bb2d2551ec0062e18f12f5aa8c30fc1319ee2"
 
       def install
         bin.install "loadbot"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kuzxnia/loadbot/releases/download/1.0.1/loadbot_1.0.1_darwin_x86_64.tar.gz"
-      sha256 "749cc33452346d7b088473b6b7c1f1d04feff25294fc423dc65b1074ac2a04cf"
+    if Hardware::CPU.arm?
+      url "https://github.com/kuzxnia/loadbot/releases/download/1.0.2/loadbot_1.0.2_darwin_arm64.tar.gz"
+      sha256 "77ccbd791891c933f9a55e9ba763a7a72aad6213a58537513d9acfb269984281"
 
       def install
         bin.install "loadbot"
@@ -29,24 +29,24 @@ class Loadbot < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kuzxnia/loadbot/releases/download/1.0.1/loadbot_1.0.1_linux_armv7.tar.gz"
-      sha256 "1ae1b0722a75edf2fe39878d0f928cbbea82958bfb81b311b6eeb4187d946cb9"
+      url "https://github.com/kuzxnia/loadbot/releases/download/1.0.2/loadbot_1.0.2_linux_armv7.tar.gz"
+      sha256 "697011a1ea47e9343795674ff86df98ea0dccbf31814af5f82d843a52b56281d"
 
       def install
         bin.install "loadbot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kuzxnia/loadbot/releases/download/1.0.1/loadbot_1.0.1_linux_arm64.tar.gz"
-      sha256 "52df7b5bbc5de82e0513c74d89886778b905fe7a58d53179563fa7e75641713b"
+      url "https://github.com/kuzxnia/loadbot/releases/download/1.0.2/loadbot_1.0.2_linux_arm64.tar.gz"
+      sha256 "46a3d3a1fccece9876642b8445cf6b6e3db81f3cfe62491187cfc5619e340f66"
 
       def install
         bin.install "loadbot"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kuzxnia/loadbot/releases/download/1.0.1/loadbot_1.0.1_linux_x86_64.tar.gz"
-      sha256 "a5eb7324818a074a5db2f3aff6d2365e6f9adc2e32e29ce0247f36a301eed417"
+      url "https://github.com/kuzxnia/loadbot/releases/download/1.0.2/loadbot_1.0.2_linux_x86_64.tar.gz"
+      sha256 "46f6a6797749c93610e0810f7c06f30b34522e4bc51979a139263a7ee9c299a2"
 
       def install
         bin.install "loadbot"
